@@ -24,7 +24,10 @@ const product = {
 // console.log(stock);
 // console.log(rating);
 
-const transaction = (type, { label, stock }) => { // Destructurizing in argument list
+// { label, stock } = {} - default empty object
+// { label, stock = 0 } = {} - default object with undefined label and stack with default value equal to 0
+
+const transaction = (type, { label, stock = 0 } = {} ) => { // Destructurizing in argument list
     // const ( label  ) = myProduct;
     console.log(type, label, stock);
 };
